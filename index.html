@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<script>
+  //Dapatkan skor total *user force* saja dengan data di bawah ini. Lakukan langkah demi langkah!
+
+var personnel = [
+  {
+    id: 5,
+    name: "Luke Skywalker",
+    pilotingScore: 98,
+    shootingScore: 56,
+    isForceUser: true,
+  },
+  {
+    id: 82,
+    name: "Sabine Wren",
+    pilotingScore: 73,
+    shootingScore: 99,
+    isForceUser: false,
+  },
+  {
+    id: 22,
+    name: "Zeb Orellios",
+    pilotingScore: 20,
+    shootingScore: 59,
+    isForceUser: false,
+  },
+  {
+    id: 15,
+    name: "Ezra Bridger",
+    pilotingScore: 43,
+    shootingScore: 67,
+    isForceUser: true,
+  },
+  {
+    id: 11,
+    name: "Caleb Dume",
+    pilotingScore: 71,
+    shootingScore: 85,
+    isForceUser: true,
+  },
+];
+
+
+
+var nama = personnel.filter(function(personal){
+  return personal.isForceUser === true;
+})
+  var totalPiloting = nama.reduce(function(accumulator,pilot){
+    return accumulator + pilot.pilotingScore;
+}, 0);
+
+var totalShooting = nama.reduce(function(accumulator,pilot){
+    return accumulator + pilot.shootingScore;
+}, 0);
+console.log (totalPiloting)
+console.log (totalShooting)
+  </script>
+</body>
+</html>
